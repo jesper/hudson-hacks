@@ -1,0 +1,4 @@
+Various hacks to make ctest/cmake play nicely with hudson/jenkins.
+
+ctest_unittests_to_junit.xsl - borrowed from a random post on http://stackoverflow.com/questions/6329215/how-to-get-ctest-results-in-hudson-jenkins
+ctest_valgrind_to_junit.xsl - A hacked version of the above XSL file to be used with valgrind output from ctest
