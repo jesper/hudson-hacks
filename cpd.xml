@@ -8,6 +8,7 @@
 			<fileset dir="${CPD_PATH_TO_FILES}">
 				<include name="**/*.php" />
                                 <exclude name="test/**" />
+                                <exclude name="**/admin/*" />
 			</fileset>
 		</cpd>
 	</target>
