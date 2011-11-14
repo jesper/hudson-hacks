@@ -1,0 +1,26 @@
+<project name="cpd" default="test" basedir="../">
+
+        <property name="outputTestResultsToFile" value="true" />
+
+	<target name="cpdphp" description="Runs CPD for PHP">
+		<taskdef name="cpd" classname="net.sourceforge.pmd.cpd.CPDTask" />
+		<cpd language="php" minimumTokenCount="100" outputFile="/tmp/cpd.xml" format="xml">
+			<fileset dir=".">
+				<include name="**/*.php" />
+                                <exclude name="**/*Test.php" />
+			</fileset>
+		</cpd>
+	</target>
+
+	<target name="cpdcpp" description="Runs CPD for CPP">
+		<taskdef name="cpd" classname="net.sourceforge.pmd.cpd.CPDTask" />
+		<cpd language="cpp" minimumTokenCount="100" outputFile="/tmp/cpd.xml" format="xml">
+			<fileset dir=".">
+				<include name="**/*.cpp" />
+				<include name="**/*.h" />
+                                <exclude name="**/tests/*" />
+			</fileset>
+		</cpd>
+	</target>
+</project>
+
