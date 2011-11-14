@@ -7,7 +7,7 @@
 		<cpd language="php" minimumTokenCount="100" outputFile="/tmp/cpd.xml" format="xml">
 			<fileset dir="${CPD_PATH_TO_FILES}">
 				<include name="**/*.php" />
-                                <exclude name="**/*Test.php" />
+                                <exclude name="test/**"" />
 			</fileset>
 		</cpd>
 	</target>
