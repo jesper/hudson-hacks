@@ -3,6 +3,9 @@
 
   <xsl:template match="/Site">
       <testsuite name="ValgrindTests">
+        <xsl:attribute name="tests">
+          <xsl:value-of select="count(/Site/DynamicAnalysis/Test)"/>
+        </xsl:attribute>
 	<properties>
 	  <xsl:for-each select="@*">
 	    <property>
